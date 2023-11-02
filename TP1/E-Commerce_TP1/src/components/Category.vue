@@ -44,6 +44,7 @@ export default {
     font-weight: 700;
     line-height: 20px;
     letter-spacing: -0.006px;
+
 }
 .items {
     color: var(--NestMart-Text-Muted, rgb(87, 81, 81));

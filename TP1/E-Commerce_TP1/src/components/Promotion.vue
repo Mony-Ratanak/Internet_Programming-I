@@ -37,10 +37,12 @@ export default {
 }
 .promo {
     margin: 20px 20px 0 0;
-    width: 515px;
+    width: 550.8px;
     height: 300px;
     position: relative;
     border-radius: 10px; 
+    flex-grow: 1;
+    flex-basis: 10%;
 }
 .image {
     position: absolute;
@@ -48,7 +50,7 @@ export default {
     display: flex;
     justify-content: end;
     align-items: end;
-    width: 200px;
+    width: 250px;
     height: 250px;
     right: 0px;
     bottom: 0px;
@@ -56,11 +58,14 @@ export default {
 img{
     mix-blend-mode: teal;
     object-fit: cover;
+    height: 250px;
+    /* width: 350px; */
 }
 .quote {
     position: absolute;
     width: calc(512px-200px);
     position: relative;
+    margin-top: 50px;
 }
 .text {
     position: absolute;
@@ -75,12 +80,11 @@ img{
     line-height: 32px;
     letter-spacing: -0.01px;
     z-index: 10;
+    margin-top: -25px;
 }
 .button{
     position: absolute;
     left: 48px;
     bottom: 75px
 }
-img {
-    height: 250px;
-}</style>
+</style>

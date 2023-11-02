@@ -1,6 +1,6 @@
 <template>
     <div class="wrap">
-      <div style="display: flex;">
+      <div class="contain">
         <div v-for="i in category" class="_fruit">
           <FruitItem :bgColor=i.bg :Img=i.img :Title=i.title :Item=i.item></FruitItem>
         </div>
@@ -117,17 +117,28 @@
   }
   </script>
   <style scoped>
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
   ._fruit {
     display: flex;
-    margin-right: 25px;
   }
   .wrap {
+    margin-top: -150px;
     width: 100%;
-    height: 50rem;
+    height: 70rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: rgb(174, 255, 255);
+  }
+  .contain{
+    display: flex;
+    gap: 37px;
+    margin-left: -15.9px;
   }
   </style>
   
