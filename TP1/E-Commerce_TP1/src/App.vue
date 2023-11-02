@@ -5,7 +5,7 @@
           <FruitItem :bgColor=i.bg :Img=i.img :Title=i.title :Item=i.item></FruitItem>
         </div>
       </div>
-      <div style="display: flex;">
+      <div class="box" style="display: flex;">
         <div v-for="i in promotion">
           <Promotion :text="i.text" :img="i.img" :pro_bg="i.bg" :btn="i.btnColor" :textBtn="i.txtBtn"></Promotion>
         </div>
@@ -137,8 +137,11 @@
   }
   .contain{
     display: flex;
-    gap: 37px;
-    margin-left: -15.9px;
+    gap: 25px;
+    /* margin-left: 3px; */
+  }
+  .box{
+    margin-left: 27px;
   }
   </style>
   

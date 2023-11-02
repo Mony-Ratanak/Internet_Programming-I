@@ -1,5 +1,5 @@
 <template>
-    <div class="promo" :style="{
+   <div class="promo" :style="{
         backgroundColor: pro_bg,
     }">
         <div class="quote">
@@ -10,7 +10,8 @@
                 alt="">
         </div>
         <Button :text="textBtn" :Bgcolor="btn" class="button"></Button>
-    </div>
+    </div> 
+    
 </template>
 
 <script>
@@ -35,9 +36,10 @@ export default {
     padding: 0;
     box-sizing: border-box;
 }
+
 .promo {
-    margin: 20px 20px 0 0;
-    width: 550.8px;
+    margin: 40px 30px 0 0;
+    width: 475px;
     height: 300px;
     position: relative;
     border-radius: 10px; 
@@ -50,15 +52,15 @@ export default {
     display: flex;
     justify-content: end;
     align-items: end;
-    width: 250px;
-    height: 250px;
+    width: 230px;
+    height: 230px;
     right: 0px;
     bottom: 0px;
 }
 img{
     mix-blend-mode: teal;
     object-fit: cover;
-    height: 250px;
+    height: 200px;
     /* width: 350px; */
 }
 .quote {

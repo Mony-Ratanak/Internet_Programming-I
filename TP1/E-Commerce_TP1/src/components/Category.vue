@@ -30,7 +30,7 @@ export default {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 136px;
+    width: 126px;
     height: 177px;
     flex-shrink: 0;
     border-radius: 10px;
