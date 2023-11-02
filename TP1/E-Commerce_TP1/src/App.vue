@@ -35,19 +35,19 @@
             img: new URL(Onion, import.meta.url).href,
             txtBtn: "Shop now",
             btnColor: "#3BB77E",
-            bg: "#F0E8D5"
+            bg: "#C3A555"
           }, {
             text: "Make your Breakfast Healthy and Easy",
             img: new URL(Juice, import.meta.url).href,
             txtBtn: "Shop now",
             btnColor: "#3BB77E",
-            bg: "#F3E8E8"
+            bg: "#E0AEA8"
           }, {
             text: "The best Organic Products Online",
             img: new URL(Mix_organic, import.meta.url).href,
             txtBtn: "Shop now",
             btnColor: "#FDC040",
-            bg: "#E7EAF3"
+            bg: "#AADC9D"
           },
         ],
         category: [
