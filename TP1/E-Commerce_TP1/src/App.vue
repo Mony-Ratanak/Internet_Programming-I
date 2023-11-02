@@ -126,9 +126,9 @@
     display: flex;
   }
   .wrap {
-    margin-top: -150px;
+    margin-top: -140px;
     width: 100%;
-    height: 70rem;
+    height: 60rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
