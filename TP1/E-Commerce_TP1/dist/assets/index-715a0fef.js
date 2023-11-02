@@ -3349,7 +3349,7 @@ function p7(c, a, e, i, f, r) {
 }
 const M7 = p4(s7, [
   ["render", p7],
-  ["__scopeId", "data-v-80f818f9"],
+  ["__scopeId", "data-v-caf3ec54"],
 ]);
 const d7 = {
     name: "Promotion",
@@ -3387,11 +3387,11 @@ function g7(c, a, e, i, f, r) {
 }
 const x7 = p4(d7, [
     ["render", g7],
-    ["__scopeId", "data-v-65681ed2"],
+    ["__scopeId", "data-v-bf4fff4b"],
   ]),
-  N7 = "./assets/img/Onion-66d1ac8d.png",
-  A7 = "./assets/img/Mix_organic-305b449c.png",
-  b7 = "./assets/img/Juice-1dd6072e.png";
+  N7 = "./img/Onion.png",
+  A7 = "./img/Mix_organic.png",
+  b7 = "./img/Juice.png";
 const S7 = {
     name: "App",
     components: { Button: s0, FruitItem: M7, Promotion: x7, Image },
@@ -3488,7 +3488,7 @@ const S7 = {
   y7 = { class: "wrap" },
   w7 = { class: "contain" },
   k7 = { class: "_fruit" },
-  _7 = { style: { display: "flex" } };
+  _7 = { class: "box", style: { display: "flex" } };
 function P7(c, a, e, i, f, r) {
   const n = $2("FruitItem"),
     l = $2("Promotion");
@@ -3552,7 +3552,7 @@ function P7(c, a, e, i, f, r) {
 }
 const T7 = p4(S7, [
   ["render", P7],
-  ["__scopeId", "data-v-cd8f188a"],
+  ["__scopeId", "data-v-84c55f83"],
 ]);
 /*!
  * Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com
