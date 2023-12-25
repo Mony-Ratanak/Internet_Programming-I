@@ -1,4 +1,4 @@
-# E-Commerce_TP1
+# E-Commerce_TP
 
 This template should help get you started developing with Vue 3 in Vite.
 
