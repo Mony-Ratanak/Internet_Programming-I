@@ -30,12 +30,14 @@ export default{
 @import url('https://fonts.googleapis.com/css2?family=Knewave&family=Lato&family=Montserrat:wght@400;700&family=Quicksand:wght@600&family=Silkscreen:wght@400;700&display=swap');
 
 .Subscribe{
-    width: 1384px;
+    width: 1415px;
     height: 538px;
     background-color: rgba(253, 192, 64, 0.2);
     position: relative;
     border-radius: 30px;
     overflow: hidden;
+    margin-top: 30px;
+    margin-left: -20px;
 }
 
 .letter_container{
