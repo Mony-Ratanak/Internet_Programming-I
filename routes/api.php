@@ -1,12 +1,53 @@
 <?php
 
-use Illuminate\Http\Request;
+namespace App\Http\Controllers;
+use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\WelcomeController;
+use App\Http\Controllers\ProductController;
+use App\Http\Controllers\BrandController;
+use App\Http\Controllers\AuthController;
+
+/*
+|--------------------------------------------------------------------------
+| API Routes
+|--------------------------------------------------------------------------
+|
+| Here is where you can register API routes for your application. These
+| routes are loaded by the RouteServiceProvider and all of them will
+| be assigned to the "api" middleware group. Make something great!
+|
+*/
+
+
+// Route::get('/categories', [Controller::class, 'getCategory'], function() {
+//     return "Get all categories";
+// });
+// Route::post('/categories', function (Request $request) {
+//     return "Create 1 category";
+// });
+// Route::get('/categories/{categoryId}', function (Request $request) {
+//     return "Get 1 category by categoryID";
+
+// });
+// Route::patch('/categories/{categoryId}', function (Request $request) {
+//     return "Update 1 category";
+// });
+
+// Route::delete('/categories/{categoryId}', function (Request $request) {
+//     return "Delete 1 category";
+// });
 
 
 Route::get('/getproductbycategory', [ProductController::class, 'getproductbycategory']);
 Route::get('/getproductbyid', [ProductController::class, 'getproductbyid']);
+Route::get('/getproductbyidwithoutcategory', [ProductController::class, 'getProductByIdWithoutCategory']);
+Route::get('/getproductbyname/{name}', [ProductController::class, 'getproductbyname']);
 Route::get('/getallproducts', [ProductController::class, 'getallproducts']);
+Route::get('/getproductbycategoryandbrand', [ProductController::class, 'getproductbycategoryandbrand']);
+Route::get('/getallproductsbybrand', [ProductController::class, 'getallproductsbybrand']);
+Route::get('/getbrandid', [BrandController::class, 'getbrandid']);
+
 
 Route::delete('/products/{product_id}', [ProductController::class, 'deleteProduct']);
 
@@ -19,39 +60,26 @@ Route::post('/register', [AuthController::class, 'register']);
 Route::post('/login', [AuthController::class, 'login']);
 
 // Verify OTP
-Route::post('/verify_otp', [AuthController::class, 'verifyOTP']);
+Route::get('/verify-otp', [AuthController::class, 'verifyOTP'])->name('verify.otp');
+Route::middleware('auth:api')->get('/profile', [AuthController::class, 'getProfile']);
+Route::get('/getallproducts', [ProductController::class, 'getallproducts'])->middleware('can.create.category');
 
 
-// Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-//     return $request->user();
+// Verify OTP
+
+// Route::get('/products/{productId}', function (Request $request) {
+//     return "Get 1 product";
+
 // });
-// Route::get('/categories', function (Request $request) {
-//     return "get all categories";
+// Route::patch('/products/{productId}', function (Request $request) {
+//     return "Update 1 product";
 // });
-// Route::post('/categories', function (Request $request) {
-//     return "Create 1 category";
+
+// Route::delete('/products/{productId}', function (Request $request) {
+//     return "Delete 1 product";
 // });
-// Route::get('/categories/{categoryId}', function (Request $request) {
-//     return "Get 1 category by categoryId";
+
+// Route::get('/categories/{categoryId/products}', function (Request $request) {
+//     return "Get all products belong to categoryId";
 // });
-// Route::patch('/categories/{categoryId}', function (Request $request) {
-//     return "Update 1 category ";
-// });
-// Route::delete('/categories/{categoryId}', function (Request $request) {
-//     return "Delete 1 category ";
-// });
-// Route::get('/products', function (Request $request) {
-//     return "get all products";
-// });
-// Route::post('/products', function (Request $request) {
-//     return "Create 1 products";
-// });
-// Route::get('/products/{productsId}', function (Request $request) {
-//     return "Get 1 products by productsId";
-// });
-// Route::patch('/categories/{productsId}', function (Request $request) {
-//     return "Update 1 products ";
-// });
-// Route::delete('/categories/{productsId}', function (Request $request) {
-//     return "Delete 1 products ";
-// });
+
