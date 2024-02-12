@@ -1,11 +1,11 @@
 <template>
-    <div class="wrap">
+  <div class="wrap">
 
       <Subscribe  v-for="subscribe in todo.subscribes" :image_background="subscribe.image_background" :image_frontground="subscribe.image_frontground" :title_letter="subscribe.title_letter" :title_letter_color="subscribe.title_letter_color" :desc_letter="subscribe.desc_letter" :desc_letter_color="subscribe.desc_letter_color"></Subscribe>
         
     <Menu feature="Featured Categories" :category="groups" class="menu"></Menu>
     <div class="container">
-      <div style="display: flex; justify-content: space-between;margin-right: 25px;">
+      <router-link :to="`/categories/$`" style="display: flex; justify-content: space-between;margin-right: 25px;">
         <div v-for="i in category" class="_fruit">
           <FruitItem
             :bgColor="i.bg"
@@ -14,7 +14,7 @@
             :Item="i.item"
           ></FruitItem>
         </div>
-      </div>
+      </router-link>
       <div style="display: flex; justify-content: space-between; margin-top: 20px;;">
         <div v-for="i in promotion">
           <Promotion
@@ -27,8 +27,8 @@
         </div>
       </div>
       <Menu feature="Featured Categories" :category="groups" style="margin-top: 30px;"></Menu>
-    <div class="Product" style="display: flex; justify-content: space-between; flex-wrap: wrap; margin-right: 25px;gap: 40px;">
-      <div v-for="i in products">
+      <div class="Product" style="display: flex; justify-content: space-between; flex-wrap: wrap; margin-right: 25px;gap: 40px;">
+        <div v-for="i in products">
           <Product
           :tag="i.tag"
           :tagBg="i.tagBg"
@@ -38,11 +38,11 @@
           :description="i.description" 
           :sellPrice="i.sellPrice"
           :discountPrice="i.discountPrice"
-        ></Product>
+          ></Product>
+        </div>
       </div>
     </div>
-    </div>
-    
+        
   </div>
   </template>
   <script>
