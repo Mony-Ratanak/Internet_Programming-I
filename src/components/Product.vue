@@ -1,40 +1,43 @@
 <template>
-    <div class="wrapper">
-      <div class="discount" :style="{background: tagBg,}">{{ tag }}</div>  
-      <img :src="image" class="_img" alt="" /> 
-      <div class="detail">
-        <div class="_p">Hodo Foods</div>
-        <div class="_title">
-          {{ name }}
-        </div>
-        <div class="star">
-          <span v-for="i in 5">
-            <img src="../assets/star-yellow.svg" alt="" v-if="i<=rate"/>
-            <img src="../assets/star-white.svg" alt="" v-else/>
-          </span>
-          <span class="rate">({{ rate }})</span> 
-        </div>
-        <div class="_gram">{{description}}</div> 
-        <div class="_price">
-          <div class="price_dis">
-            <span class="no_del">${{sellPrice}}</span>   
-            <del class="del">${{discountPrice}}</del>
+  <RouterLink :to="`/products/${id}`" >
+      <div class="wrapper">
+        <div class="discount" :style="{background: tagBg,}">{{ tag }}</div>  
+        <img :src="image" class="_img" alt="" /> 
+        <div class="detail">
+          <div class="_p">Hodo Foods</div>
+          <div class="_title">
+            {{ name }}
           </div>
-          <div class="amount" @click="increaseNum()" v-if="button==true">
-            <!-- <AddButton /> -->
-            <ButtonAdd />
+          <div class="star">
+            <span v-for="i in 5">
+              <img src="../assets/star-yellow.svg" alt="" v-if="i<=rate"/>
+              <img src="../assets/star-white.svg" alt="" v-else/>
+            </span>
+            <span class="rate">({{ rate }})</span> 
           </div>
-          <div class="amount" @click="decreaseNum()" v-else><AddButton /></div>
+          <div class="_gram">{{description}}</div> 
+          <div class="_price">
+            <div class="price_dis">
+              <span class="no_del">${{sellPrice}}</span>   
+              <del class="del">${{discountPrice}}</del>
+            </div>
+            <div class="amount" @click="increaseNum()" v-if="button==true">
+              <!-- <AddButton /> -->
+              <ButtonAdd />
+            </div>
+            <div class="amount" @click="decreaseNum()" v-else><AddButton /></div>
+          </div>
         </div>
       </div>
-    </div>
-  </template>
+    </RouterLink>
+</template>
   
   <script>
   import AddButton from "./AddButton.vue";
   import ButtonAdd from "./ButtonAdd.vue";
   export default {
     name: "Product",
+    
     components: {
       AddButton,
       ButtonAdd,
@@ -51,6 +54,7 @@
       }
     },
     props: {
+      id:Number,
       tag: String,
       tagBg: String,
       image: String,

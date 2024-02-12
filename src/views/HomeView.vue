@@ -28,8 +28,10 @@
       </div>
       <Menu feature="Featured Categories" :category="groups" style="margin-top: 30px;"></Menu>
       <div class="Product" style="display: flex; justify-content: space-between; flex-wrap: wrap; margin-right: 25px;gap: 40px;">
-        <div v-for="i in products">
+
+        <div  v-for="i in products" >
           <Product
+          :id="i.id"
           :tag="i.tag"
           :tagBg="i.tagBg"
           :image="i.image"

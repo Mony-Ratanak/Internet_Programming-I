@@ -18,7 +18,7 @@
 </template>
 
 <script>
-import MenuItems from "./MenuItems.vue";
+import MenuItems from "./menuitem.vue";
 export default {
   name: "MenuItemAll",
   components: {

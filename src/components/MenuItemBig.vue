@@ -49,7 +49,7 @@ import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import { fas } from "@fortawesome/free-solid-svg-icons";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import MenuItemAll from "./MenuItemAll.vue";
-import MenuItems from "./MenuItems.vue";
+import MenuItems from "./menuitem.vue";
 
 library.add(fas);
 export default {

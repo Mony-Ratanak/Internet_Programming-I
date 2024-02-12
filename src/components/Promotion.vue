@@ -1,14 +1,16 @@
 <template>
-   <div class="promo" :style="{backgroundColor: pro_bg,}">
-        <div class="quote">
-            <div class="text">{{text}}</div>
+    <RouterLink :to="`/products/${id}`" >
+    <div class="promo" :style="{backgroundColor: pro_bg,}">
+            <div class="quote">
+                <div class="text">{{text}}</div>
+            </div>
+            <div class="image">
+                <img :src=img
+                    alt="">
+            </div>
+            <Button :text="textBtn" :Bgcolor="btn" class="button"></Button>
         </div>
-        <div class="image">
-            <img :src=img
-                alt="">
-        </div>
-        <Button :text="textBtn" :Bgcolor="btn" class="button"></Button>
-    </div> 
+    </RouterLink> 
 </template>
 
 <script>

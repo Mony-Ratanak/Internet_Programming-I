@@ -1,48 +1,11 @@
 <template>
-    <div class="menutop">
-      <SearchBox></SearchBox>
-      <div class="MenuBarAll">
-        <MenuBarAll
-          v-for="i in MenuBarAll"
-          :key="i.MenuBarAll"
-          :link="i.link"
-          :first_bg="i.first_bg"
-          :first_icon="i.first_icon"
-          :first_color="i.first_color"
-          :first_text="i.first_text"
-          :second_bg="i.second_bg"
-          :second_icon="i.second_icon"
-          :second_color="i.second_color"
-          :second_text="i.second_text"></MenuBarAll>
-      </div>
-    </div>
-  
-    <div class="menufirst">
-      <div class="MenuItemBig">
-        <MenuItemBig />
-      </div>
-      <div class="MenuItemAll">
-        <MenuItemAll
-          v-for="i in MenuItemAll"
-          :key="i.MenuItemAll"
-          :link="i.link"
-          :first_bg="i.first_bg"
-          :first_icon="i.first_icon"
-          :first_color="i.first_color"
-          :first_text="i.first_text"
-          :second_bg="i.second_bg"
-          :second_icon="i.second_icon"
-          :second_color="i.second_color"
-          :second_text="i.second_text"></MenuItemAll>
-      </div>
-    </div>
   
     <div class="container">
       <div class="navbar">
         <RouterLink to="/"><span class="home">Home</span></RouterLink>
         <i class="uil uil-angle-right"></i> Vegetables & tubers
         <i class="uil uil-angle-right"></i>
-        <div class="text_color">{{ productInfo.Title }}</div>
+        <div class="text_color"><p>Seeds of Change Organic Quinoa, Brown, & Red Rice</p></div>
       </div>
       <div class="wrapper">
         <div class="image-container">
@@ -51,7 +14,7 @@
               <i class="pi pi-search"></i>
             </div>
             <div class="main-image">
-              <img :src="images[imgIndex]" alt="img" />
+              <img src="../assets/img/1-Seeds.png" style="width: 95%; height: 55%; margin-right: 220px;">
             </div>
           </div>
           <div class="sub-image">
@@ -59,13 +22,9 @@
               <i class="uil uil-arrow-left"></i>
             </div>
             <div class="images">
-              <div
-                class="img"
-                v-for="(img, index) in images"
-                :key="index"
-                :class="{ active: index === imgIndex }"
-                @click="imgIndex = index">
-                <img :src="img" alt="image" />
+              <div class="image">
+                <img src="../assets/img/2-Corn.png" style="width: 100px;height: 80px;margin-left: 30px;">
+                <img src="../assets/img/10-Haagen.png" style="width: 100px;height: 80px;">
               </div>
             </div>
             <div @click="handleChangeImage" class="arrow">
@@ -76,7 +35,7 @@
         <div class="content">
           <div class="status"><span>In Stock</span></div>
           <div class="title">
-            <h1>{{ productInfo.Title }}</h1>
+            <h style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-size: large;">Seeds of Change Organic Quinoa, Brown, & Red Rice</h>
           </div>
           <div class="Star">
             <font-awesome-icon :icon="['fas', 'star']" style="color: #fdc040" />
@@ -87,8 +46,8 @@
             (4.0)
           </div>
           <div class="price">
-            <div class="discount-pirce">{{ productInfo.Supvalue }}</div>
-            <div class="main-pirce">{{ productInfo.Subvalue }}</div>
+            <div class="discount-pirce">$2.00</div>
+            <div class="main-pirce">$3.00</div>
           </div>
           <div class="info">
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus
@@ -141,7 +100,6 @@
   <script>
   import { mapState } from "pinia";
   import { RouterLink, useRoute } from "vue-router";
-  import { ref, computed } from "vue";
   import MenuItemAll from "../components/MenuItemAll.vue";
   import MenuItemBig from "../components/MenuItemBig.vue";
   import SearchBox from "../components/SearchBox.vue";
@@ -153,7 +111,7 @@
   
   library.add(fas);
   export default {
-    name: "Categoryview",
+    name: "CategoryView",
     components: {
       MenuItemAll,
       MenuItemBig,
@@ -165,36 +123,6 @@
     computed: {
       ...mapState(useTodoStore, ["MenuItemAll"]),
       ...mapState(useTodoStore, ["MenuBarAll"]),
-    },
-    setup() {
-      const route = useRoute();
-      const productId = route.params.proId;
-      const imgIndex = ref(0);
-      const value = ref(1);
-      const store = useProductStore();
-      const productIndex = store.todo.findIndex((p) => p.id === productId);
-      const images = computed(() => {
-        return store.todo[productIndex].Img;
-      });
-      const productInfo = computed(() => {
-        return store.todo[productIndex];
-      });
-      const handleChangeImage = () => {
-        if (imgIndex.value >= store.todo[productIndex].Img.length - 1) return;
-        imgIndex.value = imgIndex.value + 1;
-      };
-      const handleChangeImageBack = () => {
-        if (imgIndex.value <= 0) return;
-        imgIndex.value = imgIndex.value - 1;
-      };
-      return {
-        value,
-        images,
-        productInfo,
-        handleChangeImage,
-        imgIndex,
-        handleChangeImageBack,
-      };
     },
   };
   </script>
@@ -235,6 +163,7 @@
   .container {
     font-family: "Quicksand", sans-serif;
     width: 100%;
+    margin-bottom: 50px;
   }
   .navbar {
     width: 100%;
@@ -272,7 +201,6 @@
     border-radius: 15px;
     border: 1px solid #d2d6d5;
     display: flex;
-    flex-direction: column;
     align-items: center;
   }
   .search-bar {
@@ -481,6 +409,7 @@
     align-items: center;
     flex-direction: column;
     border-radius: 15px;
+
   }
   .more-navbar {
     width: 90%;
