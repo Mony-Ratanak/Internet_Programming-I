@@ -22,7 +22,7 @@ class ProductSeeder extends Seeder
         DB::table('categories')->insert(
             [
                 [
-                    'img'=>"humbeger.png",
+                    'img'=>"a.Hamburger.png",
                     'name'=>"Hamburger",
 
                     'color'=>"#f2c8a5",
@@ -30,7 +30,7 @@ class ProductSeeder extends Seeder
                     'updated_at'=>now()
                 ],
                 [
-                    'img'=>"persimmon.png",
+                    'img'=>"b.Peace.png",
                     'name'=>"Peach",
 
                     'color'=>"#d1cd95",
@@ -38,7 +38,7 @@ class ProductSeeder extends Seeder
                     'updated_at'=>now()
                 ],
                 [
-                    'img'=>"kiwi.png",
+                    'img'=>"c.Kiwi.png",
                     'name'=>"Oganic Kiwi",
 
                     'color'=>"#a3d195",
@@ -46,7 +46,7 @@ class ProductSeeder extends Seeder
                     'updated_at'=>now()
                 ],
                 [
-                    'img'=>"apple.png",
+                    'img'=>"d.apple.png",
                     'name'=>"Apple",
 
                     'color'=>"#d195a6",
@@ -54,7 +54,7 @@ class ProductSeeder extends Seeder
                     'updated_at'=>now()
                 ],
                 [
-                    'img'=>"snack.png",
+                    'img'=>"e.snack.png",
                     'name'=>"Snack",
 
                     'color'=>"#eafa96",
@@ -62,7 +62,7 @@ class ProductSeeder extends Seeder
                     'updated_at'=>now()
                 ],
                 [
-                    'img'=>"blueberry.png",
+                    'img'=>"f.plam.png",
                     'name'=>"Black plum",
 
                     'color'=>"#a895d1",
@@ -70,7 +70,7 @@ class ProductSeeder extends Seeder
                     'updated_at'=>now()
                 ],
                 [
-                    'img'=>"cabbage.png",
+                    'img'=>"g.vegetable.png",
                     'name'=>"Vegetables",
 
                     'color'=>"#b0d195",
@@ -78,7 +78,7 @@ class ProductSeeder extends Seeder
                     'updated_at'=>now()
                 ],
                 [
-                    'img'=>"headphone.png",
+                    'img'=>"h.headphone.png",
                     'name'=>"Headphone",
 
                     'color'=>"#95d1c5",
@@ -86,7 +86,7 @@ class ProductSeeder extends Seeder
                     'updated_at'=>now()
                 ],
                 [
-                    'img'=>"Biscuits.png",
+                    'img'=>"i.cake.png",
                     'name'=>"Cake-Milk",
 
                     'color'=>"#c9d195",
@@ -94,7 +94,7 @@ class ProductSeeder extends Seeder
                     'updated_at'=>now()
                 ],
                 [
-                    'img'=>"orange.png",
+                    'img'=>"j.orange.png",
                     'name'=>"Orange",
 
                     'color'=>"#ffd175",
@@ -107,7 +107,7 @@ class ProductSeeder extends Seeder
         DB::table('promotions')->insert(
             [
                 [
-                    "image"  => "oinoin.png",
+                    "image"  => "Onion.png",
                     "title"     => "Everyday Fresh and Clean with Our Products",
                     "bg_color"  => "#C3A555",
                     "btn_color" => '#3BB77E',
@@ -115,7 +115,7 @@ class ProductSeeder extends Seeder
                     'updated_at'=>now()
                 ],
                 [
-                    "image"  => "juice.png",
+                    "image"  => "Juice.png",
                     "title"     => "Make your Breakfast Healthy and Easy",
                     "bg_color"  => "#E0AEA8",
                     "btn_color" => '#3BB77E',
@@ -123,7 +123,7 @@ class ProductSeeder extends Seeder
                     'updated_at'=>now()
                 ],
                 [
-                    "image"  => "vegetables.png",
+                    "image"  => "Mix_organic.png",
                     "title"     => "The best Organic Products Online",
                     "bg_color"  => "#AADC9D",
                     "btn_color" => '#FDC040',
@@ -139,7 +139,7 @@ class ProductSeeder extends Seeder
                 [
                     "specail_offer"=> "-17%",
                     "tag_color"    => "#3BB77E",
-                    "image"=>'mengo.png',
+                    "image"=>'1-Seeds.png',
                     "category_id"=> rand(1,10),
                     "pricing"=>rand(10,50),
                     "name" => "Seeds of Change Organic Quinoa, Brown and Red Rice",
@@ -153,7 +153,7 @@ class ProductSeeder extends Seeder
                 [
                     "specail_offer"=> "Hot",
                     "tag_color"    => "#FD6E6E",
-                    "image"=>'corn.png',
+                    "image"=>'2-Corn.png',
                     "category_id"=> rand(1,10),
                     "pricing"=>rand(10,50),
                     "name" => "All Natural Italian-Style Chicken Meatballs",
@@ -168,7 +168,7 @@ class ProductSeeder extends Seeder
                 [
                     "specail_offer"=> "Sale",
                     "tag_color"    => "#FDC040",
-                    "image"=>'oranges.png',
+                    "image"=>'3-Orange.png',
                     "category_id"=> rand(1,10),
                     "pricing"=>rand(10,50),
                     "name" => "Angie’s Boomchickapop Sweet - Salty Kettle Corn",
@@ -183,7 +183,7 @@ class ProductSeeder extends Seeder
                 [
                     "specail_offer"=> "Sale",
                     "tag_color"    => "#FDC040",
-                    "image"=>'chilis.png',
+                    "image"=>'4-Tomate.png',
                     "category_id"=> rand(1,10),
                     "pricing"=>rand(10,50),
                     "name" => "Foster Farms Takeout Crispy Classic Buffalo",
@@ -198,7 +198,7 @@ class ProductSeeder extends Seeder
                 [
                     "specail_offer"=> "-25%",
                     "tag_color"    => "#3BB77E",
-                    "image"=>'lemons.png',
+                    "image"=>'5-BlueDiamond.png',
                     "category_id"=> rand(1,10),
                     "pricing"=>rand(10,50),
                     "name" => "Blue Diamond Almonds Lightly Salted Vegetables",
@@ -213,7 +213,7 @@ class ProductSeeder extends Seeder
                 [
                     "specail_offer"=> "-18%",
                     "tag_color"    => "#3BB77E",
-                    "image"=>'fish.png',
+                    "image"=>'6-Chobani.png',
                     "category_id"=> rand(1,10),
                     "pricing"=>rand(10,50),
                     "name" => "Chobani Complete Vanilla Greek Yogurt",
@@ -228,7 +228,7 @@ class ProductSeeder extends Seeder
                 [
                     "specail_offer"=> "Sale",
                     "tag_color"    => "#FDC040",
-                    "image"=>'fish_lemon.png',
+                    "image"=>'7-Canado.png',
                     "category_id"=> rand(1,10),
                     "pricing"=>rand(10,50),
                     "name" => "Canada Dry Ginger Ale – 2 L Bottle - 200ml - 400g",
@@ -243,7 +243,7 @@ class ProductSeeder extends Seeder
                 [
                     "specail_offer"=> "Sale",
                     "tag_color"    => "#FDC040",
-                    "image"=>'steak.png',
+                    "image"=>'8-Encore.png',
                     "category_id"=> rand(1,10),
                     "pricing"=>rand(10,50),
                     "name" => "Encore Seafoods Stuffed Alaskan Salmon",
@@ -258,7 +258,7 @@ class ProductSeeder extends Seeder
                 [
                     "specail_offer"=> "Hot",
                     "tag_color"    => "#FD6E6E",
-                    "image"=>'fish_fille.png',
+                    "image"=>'9-Gorton.png',
                     "category_id"=> rand(1,10),
                     "pricing"=>rand(10,50),
                     "name" => "Gorton’s Beer Battered Fish Fillets with soft paper",
@@ -274,7 +274,7 @@ class ProductSeeder extends Seeder
 
                     "specail_offer"=> "Hot",
                     "tag_color"    => "#FD6E6E",
-                    "image"=> 'vegetable.png',
+                    "image"=> '10-Haagen.png',
                     "category_id"=> rand(1,10),
                     "pricing"=>rand(10,50),
                     "name" => "Haagen-Dazs Caramel Cone Ice Cream Ketchup",

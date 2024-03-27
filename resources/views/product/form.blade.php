@@ -1,5 +1,5 @@
 <x-layout>
-    <form action="/product/store" method="POST" enctype="multipart/form-data" style="max-width: 600px; margin: 0 auto; padding: 30px; background-color: #f9f9f9; border-radius: 10px; box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);">
+    <form action="/product/store" method="POST" enctype="multipart/form-data" style="max-width: 1000px; margin: 0 auto; padding: 30px; background-color: #9ED5D5; border-radius: 10px; box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);">
         @csrf
         <h1 style="text-align: center; margin-bottom: 30px; font-size: 24px; color: #333;">Add New Product</h1>
         <div style="margin-bottom: 20px;">
@@ -11,12 +11,12 @@
                 <label for="pricing" class="form-label" style="display: block; margin-bottom: 5px; font-weight: bold;">Price</label>
                 <input type="number" class="form-control" id="pricing" name="pricing" min="1" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;">
             </div>
-            <div style="flex: 1;">
+            <div style="flex: 1;margin-left: 30px;">
                 <label for="promotion" class="form-label" style="display: block; margin-bottom: 5px; font-weight: bold;">Promotion</label>
                 <input type="number" class="form-control" id="promotion" name="promotion" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;">
             </div>
         </div>
-        <div style="margin-bottom: 20px;">
+        <div style="margin-bottom: 20px; width:900px">
             <label class="form-label" style="display: block; margin-bottom: 5px; font-weight: bold;">Category</label>
             <select class="form-select" id="category" name="category" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;">
                 @foreach ($categories as $category)
@@ -32,9 +32,9 @@
             <label class="form-label" style="display: block; margin-bottom: 5px; font-weight: bold;">Description</label>
             <textarea id="description" name="description" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;"></textarea>
         </div>
-        <div style="display: flex; justify-content: center;">
-            <a href="{{route("home")}}" style="text-decoration: none; padding: 10px 20px; background-color: #999; color: #fff; border-radius: 5px; margin-right: 5px">Cancel</a>
-            <button type="submit" style="padding: 10px 20px; background-color: #007bff; color: #fff; border: none; border-radius: 5px; cursor: pointer;">Create</button>
+        <div style="display: flex; justify-content: center; margin-top: 20px;">
+            <a href="{{route("home")}}" style="text-decoration: none; padding: 10px 20px; background-color: #999; color: #fff; border-radius: 5px; margin-right: 5px; transition: background-color 0.3s;">Cancel</a>
+            <button type="submit" style="padding: 10px 20px; background-color: #26FDFA; color: #fff; border: none; border-radius: 5px; cursor: pointer; transition: background-color 0.3s;">Create</button>
         </div>
     </form>
 </x-layout>
